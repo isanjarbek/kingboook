@@ -26,7 +26,22 @@
   display: flex;
   gap: 24px;
   font-weight: 400;
-  height: 24px;
+
+}
+
+.forumabout {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+
+.activeblock {
+  display: none;
+}
+
+.active {
+  display: block;
 }
 
 .menu nav {
@@ -46,47 +61,46 @@
 }
 
 .basic1 {
-  height: 24px;
   width: 170px;
 }
 
 .basic2 {
-  color: #A29F9D;
-  height: 24px;
+  color: #a29f9d;
   display: flex;
   align-items: center;
+  padding: 0 10px;
+}
+.basic3 {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
 }
 .basic {
-  height: 24px;
   display: flex;
-}
-.basic .basic2 .connect {
-  height: 24px;
 }
 
 .line {
   width: 0.5px;
   height: 12px;
-  margin-top: 6px;
-  background-color: #A29F9D;
- 
+  margin-top: 10px;
+  background-color: #a29f9d;
 }
+
 .header {
   display: flex;
   margin: auto;
-  height: 440px;
+  max-height: 440px;
   justify-content: space-between;
   margin-top: 64px;
 }
 
 .learn {
   max-width: 500px;
-  height: 336px;
-  margin: 40px 8px;
+  margin: auto 0 ;
 }
 .learn h2 {
-  width: 504px;
-  height: 200px;
+  max-width: 504px;
   font-size: 56px;
   font-weight: 600;
   line-height: 64px;
@@ -113,85 +127,89 @@
   background-color: #202224;
   color: #fff;
 }
-.transfer {
+.transferleft {
   height: 48px;
-  width: 48px;
+  min-width: 48px;
   border-radius: 50%;
   border: none;
   outline: none;
   display: flex;
   align-self: center;
-  background-color: #F1F6FF;
-
+  background-color: #f1f6ff;
 }
-.transfer img {
+.transferright {
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-self: center;
+  background-color: #f1f6ff;
+}
+.transferleft img {
+  margin-top: 18px;
+  margin-left: 20px;
+}
+.transferright img {
   margin-top: 18px;
   margin-left: 20px;
 }
 
-.infor {
+.aboutitemsinfor {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin: 81px 0;
+  padding: 60px 0;
 }
-@media (max-width:768px) {
-  .infor {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .man {
 
-  }
-
-
-
-}
-.one {
+.card-one {
   background-color: #f1f6ff;
+  width: 240px;
+  height: 320px;
+  padding: 32px 0px 234px 32px;
   border-radius: 40px;
-  width: 272px;
-  height: 326px;
   position: relative;
   background-image: url("./photos/stul.png");
   background-repeat: no-repeat;
 }
-.two {
+
+.card-two {
   background-color: #f1f6ff;
+  width: 240px;
+  padding: 32px 64px 234px 32px;
   border-radius: 40px;
-  width: 272px;
-  height: 326px;
   position: relative;
   background-image: url("./photos/Mask\ Group.png");
   background-repeat: no-repeat;
 }
-.three {
+
+.card-three {
   background-color: #f1f6ff;
+  width: 240px;
+  padding: 32px 64px 234px 32px;
   border-radius: 40px;
-  width: 272px;
-  height: 326px;
   position: relative;
   background-image: url("./photos/shake.png");
   background-repeat: no-repeat;
 }
-.four {
+
+.card-four {
   background-color: #f1f6ff;
+  width: 240px;
+  padding: 32px 64px 234px 32px;
   border-radius: 40px;
-  width: 272px;
-  height: 326px;
   position: relative;
   background-image: url("./photos/delivery.png");
   background-repeat: no-repeat;
 }
 
 .infor p {
-  position: relative;
   font-size: 24px;
   font-weight: 500;
   line-height: 27.6px;
-  padding: 32px 64px 234px 32px;
   margin: 0;
-  color:#202224;
+  color: #202224;
 }
 
 .pic1 {
@@ -203,8 +221,8 @@
   font-size: 28px;
   font-weight: 400;
   color: #202224;
-
 }
+
 .conven {
   padding: 50px 0;
 }
@@ -225,38 +243,38 @@
   color: #a29f9d;
   padding: 10px 0;
 }
+
 .row {
   display: flex;
   justify-content: space-around;
 }
+
 .lang {
   max-width: 280px;
   height: 264px;
   margin-bottom: 48px;
-
 }
 
 .lang img {
-  padding-bottom:24px ;
-}
-.cource {
-  display: flex;
-  justify-content: space-between;
+  padding-bottom: 24px;
 }
 
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .common {
   max-width: 376px;
   height: 160px;
   margin-top: 48px;
   display: flex;
-  justify-content: space-between;
 }
 
 .texts {
   max-width: 232px;
   height: 136px;
-  margin-left: 24px;
   margin-top: 24px;
+  margin-left: 24px;
 }
 
 .texts h2 {
@@ -271,7 +289,7 @@
   width: 115px;
   height: 44px;
   border-radius: 16px;
-  background-color:#292929;
+  background-color: #292929;
   color: #fff;
   margin-top: 16px;
   border: none;
@@ -294,30 +312,27 @@
   padding: 48px 0;
 }
 .see {
-    max-width: 196px;
-    height: 56px;
-    padding: 16px 32px;
-    border-radius: 16px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    width: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  max-width: 196px;
+  height: 56px;
+  padding: 16px 32px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .see:hover {
-  background-color:#292929;
+  background-color: #292929;
   color: #fff;
 }
-.discount {
 
-}
-
-.course{
+.course {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 48px 0;
 }
@@ -336,35 +351,30 @@
   width: 272px;
   height: 540px;
   border-radius: 48px;
-  background-color:#FFEDD4;
+  background-color: #ffedd4;
   position: relative;
-  display: flex;
-  
 }
 .type2 {
   width: 272px;
   height: 540px;
   border-radius: 48px;
-  background-color: #DEDEDD;
-  
+  background-color: #dededd;
 }
 .type3 {
   width: 272px;
   height: 540px;
   border-radius: 48px;
-  background-color: #FFF1BF;
-  
+  background-color: #fff1bf;
 }
 
 .type4 {
   width: 272px;
   height: 540px;
   border-radius: 48px;
-  background-color: #D2F5FF;
-  
+  background-color: #d2f5ff;
 }
 
-.pics{
+.pics {
   border-radius: 50%;
   background-color: #fff;
   width: 64px;
@@ -385,7 +395,6 @@
   font-weight: 400;
   margin-left: 20px;
   margin-top: 20px;
- 
 }
 
 .abouttxt ul {
@@ -401,10 +410,9 @@
   font-weight: 500;
   display: flex;
   align-items: center;
-
 }
 
-.sumunderline p{
+.sumunderline p {
   text-decoration-line: line-through;
   font-size: 24px;
   font-weight: 400;
@@ -425,7 +433,7 @@
 .realsum h3 {
   min-width: 120px;
 }
-.realsum p{
+.realsum p {
   margin-top: 12px;
   margin-left: 5px;
   font-size: 16px;
@@ -448,20 +456,22 @@
   outline: none;
   font-size: 16px;
   font-weight: 400;
-  
 }
 
 .buy:hover {
   background-color: #202224;
   color: #fff;
 }
+
 .connectingabout {
   display: flex;
   justify-content: space-between;
   padding-top: 48px;
-  padding-bottom:120px ;
+  padding-bottom: 120px;
 }
+
 .office {
+  max-width: 590px;
   display: flex;
   gap: 40px;
   padding-bottom: 40px;
@@ -475,24 +485,133 @@
 .address {
   margin-top: 48px;
 }
-.address h3{
-  width: 272px;
+
+.address h3 {
+  max-width: 272px;
   height: 48px;
   font-size: 20px;
   margin-top: 12px;
-
 }
 
-.address p{
+.address p {
   font-size: 16px;
   font-weight: 400;
-  color: #A29F9D;
+  color: #a29f9d;
 }
 
-.map iframe{
-  width: 584px;
+.map iframe {
+  max-width: 590px;
   height: 320px;
-  border-radius:48px;
+  border-radius: 48px;
   border: none;
   position: relative;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding: 0 64px;
+  }
+  
+  .forumabout {
+    border-left: 1px solid #a29f9d;
+    display: block;
+    padding: 0;
+
+  }
+ 
+  .line {
+    display: none;
+
+  }
+  .transferleft {
+    margin: 0;
+  }
+  .learn {
+    margin-bottom: 20px;
+  }
+  .learn h2{
+    font-size: 48px;
+    line-height: 1;
+  }
+  
+  .man{
+    max-width: 390px;
+    max-height: 360px;
+    
+  }
+
+  .man img {
+    width: 100%;
+  }
+
+  .infor {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .aboutitemsinfor {
+    justify-content: center;
+  }
+  .card-one {
+    margin: 24px;
+  }
+  .card-two {
+    margin: 24px;
+  }
+  .card-three {
+    margin: 24px;
+  }
+  .card-four {
+    margin: 24px;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .discount {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .course {
+    justify-content: center;
+  }
+
+  .type1 {
+    margin: 24px;
+  }
+  .type2 {
+    margin: 24px;
+  }
+  .type3 {
+    margin: 24px;
+  }
+  .type4 {
+    margin: 24px;
+  }
+
+  .these {
+    display: flex;
+    justify-content: center;
+  }
+  .connectingabout {
+    display: flex;
+    padding: 40px 0;
+  }
+
+  .address {
+    max-width: 55%;
+  }
+
+  
+
+  .office h3 {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
 }
