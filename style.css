@@ -90,20 +90,48 @@
 .header {
   display: flex;
   margin: auto;
-  max-height: 440px;
   justify-content: space-between;
-  margin-top: 64px;
+  
 }
 
+.fontpictxt {
+  display: flex;
+}
+@media (max-width:768px) {
+  .fontpictxt {
+    flex-direction: column-reverse;
+
+  }
+  .sectiontxt {
+    display: block;
+    margin-top: 30px;
+    
+  }
+  .paragrf {
+    font-weight: 500;
+    font-size: 40px;
+    /* width: 250px; */
+  }
+
+  .learn {
+    padding-left:40px;
+  }
+  .man img {
+    width: 390px;
+  }
+}
+
+
 .learn {
-  max-width: 500px;
-  margin: auto 0 ;
+  max-width: 470px;
+  margin: auto 0;
+  padding: 0 10px;
 }
 .learn h2 {
   max-width: 504px;
   font-size: 56px;
   font-weight: 600;
-  line-height: 64px;
+  line-height: 100%;
   align-items: center;
 }
 .learn p {
@@ -206,10 +234,11 @@
 
 .infor p {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 27.6px;
   margin: 0;
   color: #202224;
+  width: 176px;
 }
 
 .pic1 {
@@ -225,6 +254,9 @@
 
 .conven {
   padding: 50px 0;
+  display: grid;
+  grid-template-columns: 280px 280px 280px;
+  justify-content: space-between;
 }
 
 .conven h2 {
@@ -261,7 +293,8 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+  grid-template-columns: 376px 376px 376px;
 }
 .common {
   max-width: 376px;
@@ -279,10 +312,9 @@
 
 .texts h2 {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 24px;
-  width: 207px;
-  height: 48px;
+  width: 140px;
 }
 
 .also {
@@ -291,12 +323,16 @@
   border-radius: 16px;
   background-color: #292929;
   color: #fff;
-  margin-top: 16px;
+  position: relative;
+  top: -70px;
   border: none;
   outline: none;
+  opacity: 0;
+  transition: 1s;
 }
 
-.texts p {
+
+.texts .comontxt {
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
@@ -304,6 +340,13 @@
   max-width: 200px;
   height: 64px;
   margin-top: 16px;
+}
+
+.common:hover .comontxt {
+  opacity: 0;
+}
+.common:hover .also{
+  opacity: 1;
 }
 
 .these {
@@ -413,7 +456,6 @@
 }
 
 .sumunderline p {
-  text-decoration-line: line-through;
   font-size: 24px;
   font-weight: 400;
   color: #707070;
@@ -483,6 +525,7 @@
 }
 
 .address {
+  max-width: 590px;
   margin-top: 48px;
 }
 
@@ -499,9 +542,13 @@
   color: #a29f9d;
 }
 
-.map iframe {
-  max-width: 590px;
+.map {
+  width: 590px;
   height: 320px;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
   border-radius: 48px;
   border: none;
   position: relative;
@@ -518,7 +565,6 @@
     border-left: 1px solid #a29f9d;
     display: block;
     padding: 0;
-
   }
  
   .line {
@@ -530,16 +576,15 @@
   }
   .learn {
     margin-bottom: 20px;
+    margin-left: 30px;
   }
   .learn h2{
     font-size: 48px;
-    line-height: 1;
   }
   
   .man{
     max-width: 390px;
     max-height: 360px;
-    
   }
 
   .man img {
@@ -565,10 +610,15 @@
   .card-four {
     margin: 24px;
   }
-
+  .conven {
+    display: grid;
+    grid-template-columns:280px 280px 280px;
+    justify-content: space-between;
+  }
   .list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    justify-content: space-between  ;
+    grid-template-columns: 376px 376px;
   }
 
   .discount {
@@ -599,19 +649,94 @@
   }
   .connectingabout {
     display: flex;
+    justify-content: space-between;
     padding: 40px 0;
   }
 
   .address {
-    max-width: 55%;
+    max-width: 100%;
   }
 
-  
-
   .office h3 {
-    max-width: 250px;
+    width: 250px;
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  .right {
+    display: none;
+  }
+
+  .forumabout {
+    display: flex;
+    border: none;
+  }
+  .line {
+    width: 0.5px;
+    height: 12px;
+    margin-top: 10px;
+    background-color: #a29f9d;
+    display: block;
+  }
+  .conven {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 280px 280px;
+  }
+  
+  .texts h2 {
+    width: 300px;
+    padding-bottom: 0;
+  }
+  .texts .comontxt{
+    font-size: 18px;
+    line-height: 120%;
+  }
+  .also {
+    display: block;
+    width:80px;
+    height: 30px;
+    font-size: 11px;
+    position: relative;
+    left: 60px;
+  }
+  .list{
+    width: 350px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .connectingabout{
+      display: block;
+  }
+  .address {
+    width: 100%;
+  }
+
+  .office {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .map iframe {
+    width: 100%;
+    margin: auto 0;
+  }
+}
+
+
+@media only screen and (max-width: 425px) {
+  .forumabout {
+    display: none;
+    color: red ;
+  }
+
+  .basic2 {
+    color: red;
+  }
+
+  .transferleft {
+    display: none;
+  }
 }
