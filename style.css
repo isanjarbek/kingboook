@@ -13,7 +13,6 @@
 .container {
   max-width: 1208px;
   margin: auto;
-  flex-wrap: wrap;
 }
 .menu {
   padding: 25px 10px;
@@ -21,20 +20,18 @@
   line-height: 14px;
   display: flex;
   justify-content: space-between;
+  
 }
 .menu ul {
   display: flex;
   gap: 24px;
   font-weight: 400;
-
 }
 
 .forumabout {
-  display: flex;
-
+  display: flex;  
   justify-content: space-between;
 }
-
 
 .activeblock {
   display: none;
@@ -60,15 +57,27 @@
   justify-content: center;
 }
 
+.basic2 a {
+  color: #a29f9d;
+  text-decoration: none;
+}
+.basic3 a{
+  color: black;
+  text-decoration: none;
+}
+.right a {
+  text-decoration: none;
+  color: black;
+}
 .basic1 {
   width: 170px;
 }
 
 .basic2 {
-  color: #a29f9d;
   display: flex;
   align-items: center;
   padding: 0 10px;
+  
 }
 .basic3 {
   font-weight: 600;
@@ -89,7 +98,8 @@
 
 .header {
   display: flex;
-  margin: auto;
+  /* margin: auto; */
+  /* align-items: center; */
   justify-content: space-between;
   
 }
@@ -97,30 +107,6 @@
 .fontpictxt {
   display: flex;
 }
-@media (max-width:768px) {
-  .fontpictxt {
-    flex-direction: column-reverse;
-
-  }
-  .sectiontxt {
-    display: block;
-    margin-top: 30px;
-    
-  }
-  .paragrf {
-    font-weight: 500;
-    font-size: 40px;
-    /* width: 250px; */
-  }
-
-  .learn {
-    padding-left:40px;
-  }
-  .man img {
-    width: 390px;
-  }
-}
-
 
 .learn {
   max-width: 470px;
@@ -132,7 +118,7 @@
   font-size: 56px;
   font-weight: 600;
   line-height: 100%;
-  align-items: center;
+
 }
 .learn p {
   padding: 24px 0;
@@ -185,8 +171,8 @@
 }
 
 .aboutitemsinfor {
+  max-width: 1208px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   padding: 60px 0;
 }
@@ -241,18 +227,14 @@
   width: 176px;
 }
 
-.pic1 {
-  position: relative;
-  bottom: 200px;
-}
-
-.convenience {
+/* .convenience {
   font-size: 28px;
   font-weight: 400;
   color: #202224;
-}
+} */
 
 .conven {
+  max-width: ;
   padding: 50px 0;
   display: grid;
   grid-template-columns: 280px 280px 280px;
@@ -292,6 +274,8 @@
 }
 
 .list {
+  max-width: 1208px;
+  margin: auto;
   display: grid;
   justify-content: space-around;
   grid-template-columns: 376px 376px 376px;
@@ -441,8 +425,6 @@
 }
 
 .abouttxt ul {
-  width: 164px;
-  height: 176px;
   margin-left: 30px;
 }
 
@@ -463,6 +445,7 @@
   height: 24px;
   margin-top: 8px;
   margin-left: 5px;
+  text-decoration-line: line-through;
 }
 
 .realsum {
@@ -490,7 +473,6 @@
   padding: 40px 0;
 }
 .buy {
-  display: flex;
   height: 56px;
   width: 176px;
   padding: 16px 48px;
@@ -531,7 +513,7 @@
 
 .address h3 {
   max-width: 272px;
-  height: 48px;
+  /* height: 48px; */
   font-size: 20px;
   margin-top: 12px;
 }
@@ -542,7 +524,7 @@
   color: #a29f9d;
 }
 
-.map {
+.map {  
   width: 590px;
   height: 320px;
 }
@@ -551,14 +533,14 @@
   height: 100%;
   border-radius: 48px;
   border: none;
-  position: relative;
+  /* position: relative; */
 }
 
 /* responsive */
 
 @media only screen and (max-width: 1024px) {
   .container {
-    padding: 0 64px;
+   
   }
   
   .forumabout {
@@ -569,26 +551,27 @@
  
   .line {
     display: none;
-
   }
-  .transferleft {
+  
+  /* .transferleft {
     margin: 0;
-  }
+  } */
   .learn {
     margin-bottom: 20px;
     margin-left: 30px;
+    padding-left:40px;
   }
   .learn h2{
-    font-size: 48px;
+    font-size: 48px;  
   }
   
   .man{
     max-width: 390px;
-    max-height: 360px;
-  }
+    max-height: 360px;  
+  } 
 
   .man img {
-    width: 100%;
+    width: 390px;
   }
 
   .infor {
@@ -598,7 +581,11 @@
   .aboutitemsinfor {
     justify-content: center;
   }
-  .card-one {
+
+  .conven {
+    padding: 0 10px;
+  }
+  .card-one { 
     margin: 24px;
   }
   .card-two {
@@ -610,14 +597,10 @@
   .card-four {
     margin: 24px;
   }
-  .conven {
-    display: grid;
-    grid-template-columns:280px 280px 280px;
-    justify-content: space-between;
-  }
+
   .list {
     display: grid;
-    justify-content: space-between  ;
+    justify-content: space-between;
     grid-template-columns: 376px 376px;
   }
 
@@ -643,10 +626,10 @@
     margin: 24px;
   }
 
-  .these {
+  /* .these {
     display: flex;
     justify-content: center;
-  }
+  } */
   .connectingabout {
     display: flex;
     justify-content: space-between;
@@ -671,6 +654,9 @@
     display: flex;
     border: none;
   }
+  .fontpictxt {
+    flex-direction: column-reverse;
+  }
   .line {
     width: 0.5px;
     height: 12px;
@@ -685,7 +671,7 @@
   }
   
   .texts h2 {
-    width: 300px;
+    width: 240px;
     padding-bottom: 0;
   }
   .texts .comontxt{
@@ -726,17 +712,76 @@
 }
 
 
-@media only screen and (max-width: 425px) {
-  .forumabout {
-    display: none;
-    color: red ;
+@media only screen and (max-width: 426px) {
+  .container {
+      max-width: 375px;
+      margin: auto;
+      padding: 0 64px;
   }
-
-  .basic2 {
-    color: red;
+  .forumabout { 
+    display: none;
   }
 
   .transferleft {
     display: none;
   }
+  .transferright {
+    display: none;
+  }
+  .man img{
+    max-width: 300px;
+    height: 280px;
+    
+  }
+  .learn {
+    max-width: 300px;
+    padding: 0;
+  }
+  .learn h2 {
+    font-size: 27px;
+    width: 300px;
+   padding: 0;
+  }
+
+  .conven {
+    display: grid;
+    grid-template-columns: 280px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .course {
+    display: grid;
+    grid-template-columns: 272px;
+    justify-content: center;
+  }
+  .list {
+    display: grid;
+    grid-template-columns: 370px;
+    justify-content: center;
+  }
+  .texts h2 {
+    max-width: 170px;
+  }
+  .texts .comontxt {
+    font-size: 16px;
+  }
+  .office {
+    display: block;
+  }
+
+  .connectingabout {
+    width: 375px;
+   
+  }
+  .map{
+    max-width:375px;
+    margin: auto;
+  }
+  
+}
+html, body, #map-canvas {
+  height: 100%;
+  margin: 0px;
+  padding: 0px
 }
