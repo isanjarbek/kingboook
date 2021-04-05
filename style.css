@@ -230,7 +230,6 @@
 }
 
 .conven {
-  max-width: ;
   padding: 50px 0;
   display: grid;
   grid-template-columns: 280px 280px 280px;
@@ -952,7 +951,6 @@ html, body, #map-canvas {
     width: 295px;
   }
   .street h3 {
-    width: 295px
-    ];
+    width: 295px;
   }
 }
